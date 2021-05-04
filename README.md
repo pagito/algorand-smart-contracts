@@ -3,6 +3,7 @@ Example stateful and stateless smart contracts.
 
 ## Requirements
 
+### NodeJS
 ### Install a node
 [Docs](https://developer.algorand.org/docs/run-a-node/setup/install/)
 

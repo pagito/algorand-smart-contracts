@@ -46,7 +46,7 @@ if (validArg) {
         path = require('path'),
         filePath = path.join(`${__dirname}/contracts`, program);
         programSource = fs.readFileSync(filePath);
-        console.log("programSource: ", programSource)
+        //console.log("programSource: ", programSource)
         
         let encoder = new TextEncoder();
         let programBytes = encoder.encode(programSource);
@@ -95,7 +95,7 @@ if (validArg) {
         // Sign the transaction
         let signedTxn = txn.signTxn(creatorAccount.sk);
         console.log("Signed transaction with txID: %s", txId);
-        console.log("signedTxn: ", signedTxn)
+        //console.log("signedTxn: ", signedTxn)
 
         // Submit the transaction
         await client.sendRawTransaction(signedTxn).do();
@@ -126,7 +126,7 @@ if (validArg) {
             let clearProgram = await compileProgram(algodClient, 'clear.teal');
 
             // create new application
-            let appId = await createApp(algodClient, creatorAccount, approvalProgram, clearProgram, localInts, localBytes);
+            let appId = await createApp(algodClient, creatorAccount, approvalProgram, clearProgram, localInts, localBytes, globalInts, globalBytes);
             console.log("Done")
         }
         catch (err){
