@@ -13,9 +13,9 @@ npm install algosdk
 
 ### Config
 If you are running your own Algorand node and not using sandbox, change those variables:
-- <algod-token>
-- <algod-address>
-- <algod-port>
+- algod-token
+- algod-address
+- algod-port
 
 ### Run contract deployment file
 ```shell
